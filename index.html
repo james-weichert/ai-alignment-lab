@@ -3,6 +3,8 @@
     <head>
         <title>AI Alignment Lab</title>
 
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
         <style>
@@ -18,11 +20,11 @@
 
                 padding-bottom: 5em;
 
-                --salmon: #cc7c66;
-                --purple: #766293;
-                --blue: #6196a8;
-                --pink: #c27ba0;
-                --green: #68937e;
+                --red: #A76552;
+                --purple: #6C5A87;
+                --blue: #487484;
+                /* --pink: #c27ba0; */
+                --green: #5A7C6D;
                 --orange: #ce813e;
                 
             }
@@ -59,14 +61,29 @@
             }
 
             a {
-                color: #5A80AF;
+                color: var(--blue);
             }
 
             a:hover {
-                color: #83A0C3;
+                color: #719DAD;
                 cursor: pointer;
             }
 
+            blockquote {
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            footer {
+                text-align: center;
+                font-size: 0.75em;
+                margin-bottom: 2em;
+
+                width: 40vw;
+                min-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
             
 
             
@@ -85,7 +102,7 @@
             <nav>
                 <a href="https://doi.org/10.1145/3803401.3811967" target="_blank">Publication</a>
                 <a href="https://docs.google.com/presentation/d/165-ikpUuYSiXxL-supezHMcFvR3Zjy1t0HTLhdb2zf0/edit?usp=sharing" target="_blank">Presentation</a>
-                <a href="" target="_blank">Lab Notebook</a>
+                <a href="https://colab.research.google.com/drive/1Ohl5zZ58EXg3pfuh2omPJArixupYExa3?usp=sharing" target="_blank">Lab Notebook</a>
             </nav>
 
             <h3>Summary</h3>
@@ -99,139 +116,51 @@
                 and policies to govern the use of AI.
             </blockquote>    
             
-            <p>
-                The intensifying focus of governments on the regulation of artificial intelligence (AI) technologies is evidenced both by major policy
-                documents such as the EU AI Act or US executive orders. These developments, coupled with the abundance of available guidelines for 'responsible AI', herald the emergence of AI
-                policy as an important field of study. 
-            </p>
             
-            <p>
-                We argue that policy and compliance considerations will have significant impacts on the AI development life cycle, necessitating AI
-                developers able to navigate abstract policy demands (or reconcile conflicting ones). Yet, we find that discussions of AI policy developments
-                are largely absent from the computing curriculum, leaving critical competencies underdeveloped.
-            </p>
-            
-            <p>
-                Synthesizing our prior work in this area, <strong><em>we propose a novel framework to scaffold the integration of AI
-                policy discussions in CS courses</em></strong>. In doing so, we hope to offer a new (and practical)
-                perspective to build on existing literature in the fields of AI policy, AI ethics, and CS education.
-            </p>
             
             <h3>AI Alignment Lab</h3>
 
+            <p>This AI Alignment Lab is an experimental 'hands-on' assignment designed for advanced undergraduate computing courses on artificial intelligence (AI), 
+            machine learning, and/or the social impacts of computing (i.e. CS ethics courses). In this assignment, students are challenged to <strong style="color:var(--blue)">jailbreak</strong> and then <strong style="color:var(--green)">align</strong> 
+            the open source large language model (LLM) <code>Mistral 7B</code> relative to a specific desired behavior (e.g. using appropriate language in responses).</p>
+
+            <p>In doing so, students should become aware of (some of) the limitations of current LLM safety mechanisms, and are encouraged to explore the difficult challenge 
+            of aligning AI models through a combination of fine-tuning, hard-coded filters, and policies to govern the use of AI.</p>
+
+            <p>The assignment has three specific learning objectives:</p>
+
+            <ul>
+                <li><strong><em>Recognize</em></strong> limitations in the alignment of large language models, and <strong><em>describe</em></strong> how and why these limitations can be used to produce undesired outputs.</li>
+                <li><strong><em>Apply</em></strong> understanding of AI alignment limitations to jailbreak and then subsequently align an open source LLM.</li>
+                <li><strong><em>Evaluate</em></strong> the success of technical alignment interventions, and <strong><em>consider</em></strong> the role of policy and governance structures in the responsible development and deployment of AI.</li>
+            </ul>
+            
+                <h4>Recommend Use</h4>
+
+                <p>This assignment was created as a Python notebook (.ipynb) file hosted on Google Colab, which provides a virtual GPU runtime enabling faster use of the 7B parameter LLM. 
+                    Running this file locally is possible but not recommended unless your machine has sufficient RAM or GPU resources.</p>
+            
             <h3>Engaging with Questions of AI Limitations and Governance</h3>
 
-            <h4>Perspectives</h4>
-            
-            <p>
-                We decompose discussions about the implications of AI policies across a continuum of perspectives ranging from socio-political
-                considerations to technical ones. Given the complexity of aligning policy preferences with technical specifications, we propose a
-                translational perspective focused on how to transition from 'principles to practices'.
-            </p>
+            <h4><span style="color: var(--purple)">Reflection</span> Prompts</h4>
 
             <ul>
-                <li><strong style="color: var(--salmon)">Socio-Political</strong> What expectations does <em>society</em> have of the technology?</li>
-                <li><strong style="color: var(--purple)">Translational</strong> How can preferences be <em>formulated</em> as specifications?</li>
-                <li><strong style="color: var(--blue)">Technical</strong> How can specifications be <em>implemented</em>?</li>
+                <li>How is the model aligned to behave. What ethical principle(s) is the model alignment intended to promote?</li>
+
+                <li>Why and how is it possible to circumvent this alignment?</li>
+
+                <li>How robustly does your aligned model adhere to its intended behavior. In what scenarios does the alignment work well? In what scenarios does the alignment fail (and why)?</li>
+
+                <li>Propose a policy which a similar model should employ to avoid the behavior/harm you tried to prevent. How could this policy be robustly implemented in code?</li>
             </ul>
-
-            <h4>Dimensions</h4>
-            
-            <p>
-                Orthogonal to these three perspectives, three dimensions—<strong>scope</strong>, <strong>power</strong>, <strong>agency</strong>—act as
-                lenses through which to segment concerns about AI policy implications. These dimensions are informed by research identifying the
-                analysis of power structures and roles of AI practitioners as important competencies for the emerging 'AI curriculum'.
-            </p>
-
-            <ul>
-                <li><strong style="color: var(--pink)">SCOPE</strong> What does a policy require or prohibit, and of whom?</li>
-                <li><strong style="color: var(--green)">POWER</strong> Who is involved, who benefits, and who is harmed?</li>
-                <li><strong style="color: var(--orange)">AGENCY</strong> What role can and should practitioners play?</li>
-            </ul>
-
-            <br>
-
-            <h4>Guiding Questions</h4>
-
-            <table style="font-size: 0.9em;">
-                <tr style="text-align: center;">
-                    <td></td>
-                    <td><strong style="color: var(--salmon)">Socio-Political</strong></td>
-                    <td><strong style="color: var(--purple)">Translational</strong></td>
-                    <td><strong style="color: var(--blue)">Technical</strong></td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong style="color: var(--pink)">SCOPE</strong>
-                    </td>
-                    <td>
-                        What ethical principles is this policy intended to reinforce?
-                        <br>
-                        <br>
-                        To which political (or social) jurisdictions does this policy apply?
-                    </td>
-                    <td>
-                        What technical specifications do these ethical principles require?
-                        <br>
-                        <br>
-                        How do these jurisdictions translate to technical user groups?
-                    </td>
-                    <td>
-                        What algorithms/systems satisfy these technical specifications?
-                        <br>
-                        <br>
-                        How should user permissions be configured?
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong style="color: var(--green);">POWER</strong>
-                    </td>
-                    <td>
-                        Which individuals and/or organizations created this policy?
-                        <br>
-                        <br>
-                        Who benefits from this policy? Is anyone (disproportionately) harmed by this policy?
-                    </td>
-                    <td>
-                        Does this policy carry any implied values or assumptions?
-                        <br>
-                        <br>
-                        What perspectives are represented by the developers? Are there perspectives missing?
-                    </td>
-                    <td>
-                        Who will be responsible for overseeing the policy implementation?
-                        <br>
-                        <br>
-                        What technical safeguards should be implemented to prevent harm to users?
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong style="color: var(--orange);">AGENCY</strong>
-                    </td>
-                    <td>
-                        Who was consulted (explicitly or implicitly) in shaping this policy?
-                        <br>
-                        <br>
-                        What opportunities exist to influence this policy?
-                    </td>
-                    <td>
-                        How should policymakers and developers interact?
-                        <br>
-                        <br>
-                        What role should developers play in implementing this policy?
-                    </td>
-                    <td>
-                        Do technical limitations conflict with policy expectations?
-                        <br>
-                        <br>
-                        How can the faithful implementation of the policy be measured?
-                    </td>
-                </tr>
-            </table>
 
         </main>
+
+        <footer>
+            
+            <p>The <a>AI Alignment Lab</a> was created by James Weichert and published at ACM ITiCSE 2026, and is available for reuse under a Creative Commons Attribution 4.0 license.</p>
+            <img src="./cc-by.png" style="width: 5em;" alt="Badge for Creative Commons Attribution 4.0 license, showing the text 'CC' and 'BY' with an icon of a standing person."/>
+        </footer>
 
     </body>
 </html>
