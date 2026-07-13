@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI Alignment Lab</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <style>
+            html {
+                font-family: 'Open Sans', sans-serif;
+                color: #314349;
+            }
+
+            main {
+                width: 80vw;
+                margin-left: 10vw;
+                margin-top: 5vh;
+
+                padding-bottom: 5em;
+
+                --salmon: #cc7c66;
+                --purple: #766293;
+                --blue: #6196a8;
+                --pink: #c27ba0;
+                --green: #68937e;
+                --orange: #ce813e;
+                
+            }
+
+            h5 {
+                 font-weight: normal;
+                 font-size: 1.1em;
+            }
+
+            table {
+                border-collapse: collapse;
+                border-top: 0.1em solid #CCC;
+            }
+            tr {
+                border-bottom: 0.1em solid #CCC;
+            }
+            td {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+
+            nav {
+                display: flex;
+                width: 50%;
+                min-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a {
+                color: #5A80AF;
+            }
+
+            a:hover {
+                color: #83A0C3;
+                cursor: pointer;
+            }
+
+            
+
+            
+        </style>
+    </head>
+    <body>
+
+        <main>
+
+            <h1>Framing Discussions of AI Policy Implications in Computing Courses</h1>
+            <h4><a href="https://jpw.info" target="_blank" style="color: #5FAB68">James Weichert</a></h4>
+            <h5><em>ACM Conference on Innovation and Technology in Computer Science Education 2026</em></h5>
+
+            <br />
+
+            <nav>
+                <a href="https://doi.org/10.1145/3770761.3777183" target="_blank">Publication</a>
+                <a href="./weichert_eldardiry_sigcse_poster.pdf" target="_blank">Poster</a>
+                <a href="https://arxiv.org/abs/2509.25524" target="_blank">Preprint</a>
+            </nav>
+
+            <h3>Summary</h3>
+
+            <blockquote>
+                How can CS educators integrate discussions about AI policy in computing courses?
+            </blockquote>    
+            
+            <p>
+                The intensifying focus of governments on the regulation of artificial intelligence (AI) technologies is evidenced both by major policy
+                documents such as the EU AI Act or US executive orders. These developments, coupled with the abundance of available guidelines for 'responsible AI', herald the emergence of AI
+                policy as an important field of study. 
+            </p>
+            
+            <p>
+                We argue that policy and compliance considerations will have significant impacts on the AI development life cycle, necessitating AI
+                developers able to navigate abstract policy demands (or reconcile conflicting ones). Yet, we find that discussions of AI policy developments
+                are largely absent from the computing curriculum, leaving critical competencies underdeveloped.
+            </p>
+            
+            <p>
+                Synthesizing our prior work in this area, <strong><em>we propose a novel framework to scaffold the integration of AI
+                policy discussions in CS courses</em></strong>. In doing so, we hope to offer a new (and practical)
+                perspective to build on existing literature in the fields of AI policy, AI ethics, and CS education.
+            </p>
+            
+            <h3>Framework</h3>
+
+            <h4>Perspectives</h4>
+            
+            <p>
+                We decompose discussions about the implications of AI policies across a continuum of perspectives ranging from socio-political
+                considerations to technical ones. Given the complexity of aligning policy preferences with technical specifications, we propose a
+                translational perspective focused on how to transition from 'principles to practices'.
+            </p>
+
+            <ul>
+                <li><strong style="color: var(--salmon)">Socio-Political</strong> What expectations does <em>society</em> have of the technology?</li>
+                <li><strong style="color: var(--purple)">Translational</strong> How can preferences be <em>formulated</em> as specifications?</li>
+                <li><strong style="color: var(--blue)">Technical</strong> How can specifications be <em>implemented</em>?</li>
+            </ul>
+
+            <h4>Dimensions</h4>
+            
+            <p>
+                Orthogonal to these three perspectives, three dimensions—<strong>scope</strong>, <strong>power</strong>, <strong>agency</strong>—act as
+                lenses through which to segment concerns about AI policy implications. These dimensions are informed by research identifying the
+                analysis of power structures and roles of AI practitioners as important competencies for the emerging 'AI curriculum'.
+            </p>
+
+            <ul>
+                <li><strong style="color: var(--pink)">SCOPE</strong> What does a policy require or prohibit, and of whom?</li>
+                <li><strong style="color: var(--green)">POWER</strong> Who is involved, who benefits, and who is harmed?</li>
+                <li><strong style="color: var(--orange)">AGENCY</strong> What role can and should practitioners play?</li>
+            </ul>
+
+            <br>
+
+            <h4>Guiding Questions</h4>
+
+            <table style="font-size: 0.9em;">
+                <tr style="text-align: center;">
+                    <td></td>
+                    <td><strong style="color: var(--salmon)">Socio-Political</strong></td>
+                    <td><strong style="color: var(--purple)">Translational</strong></td>
+                    <td><strong style="color: var(--blue)">Technical</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong style="color: var(--pink)">SCOPE</strong>
+                    </td>
+                    <td>
+                        What ethical principles is this policy intended to reinforce?
+                        <br>
+                        <br>
+                        To which political (or social) jurisdictions does this policy apply?
+                    </td>
+                    <td>
+                        What technical specifications do these ethical principles require?
+                        <br>
+                        <br>
+                        How do these jurisdictions translate to technical user groups?
+                    </td>
+                    <td>
+                        What algorithms/systems satisfy these technical specifications?
+                        <br>
+                        <br>
+                        How should user permissions be configured?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong style="color: var(--green);">POWER</strong>
+                    </td>
+                    <td>
+                        Which individuals and/or organizations created this policy?
+                        <br>
+                        <br>
+                        Who benefits from this policy? Is anyone (disproportionately) harmed by this policy?
+                    </td>
+                    <td>
+                        Does this policy carry any implied values or assumptions?
+                        <br>
+                        <br>
+                        What perspectives are represented by the developers? Are there perspectives missing?
+                    </td>
+                    <td>
+                        Who will be responsible for overseeing the policy implementation?
+                        <br>
+                        <br>
+                        What technical safeguards should be implemented to prevent harm to users?
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong style="color: var(--orange);">AGENCY</strong>
+                    </td>
+                    <td>
+                        Who was consulted (explicitly or implicitly) in shaping this policy?
+                        <br>
+                        <br>
+                        What opportunities exist to influence this policy?
+                    </td>
+                    <td>
+                        How should policymakers and developers interact?
+                        <br>
+                        <br>
+                        What role should developers play in implementing this policy?
+                    </td>
+                    <td>
+                        Do technical limitations conflict with policy expectations?
+                        <br>
+                        <br>
+                        How can the faithful implementation of the policy be measured?
+                    </td>
+                </tr>
+            </table>
+
+        </main>
+
+    </body>
+</html>
